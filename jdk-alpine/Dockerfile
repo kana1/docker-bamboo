@@ -8,6 +8,7 @@ LABEL container=openjre \
 ENV LANG C.UTF-8
 
 RUN apk add --update --no-cache \
+  tini && \ # installing a init process 
   openjdk8 && \
   bash
 
