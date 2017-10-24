@@ -1,7 +1,10 @@
 FROM kana1/alpine-openjdk-jdk8
 
 RUN apk add --no-cache --update \
-    ca-certificates curl tar
+    ca-certificates && \
+    curl && \
+    tar && \
+    git
 
 # development dependencies installation
 ARG MAVEN_VERSION=3.5.0
